@@ -1,0 +1,11 @@
+In Ruby, arguments are passed by reference (sort of). However, the behavior depends on the type of object you’re dealing with.
+
+	•	Pass by value typically means that when you pass a variable to a method, you’re passing a copy of the variable, and any changes made inside the method don’t affect the original variable outside the method.
+	•	Pass by reference means that when you pass a variable, you’re passing a reference to the original object, so any changes made inside the method are reflected on the original object.
+
+How Ruby Handles This:
+
+Ruby uses pass by reference of the object, but not the reference itself. This means:
+
+	•	Immutable objects (like integers, floats, symbols, booleans) act as if they’re passed by value because you can’t change their contents. For example, changing an integer inside a method won’t affect the integer outside the method.
+	•	Mutable objects (like arrays, hashes, strings) behave like they’re passed by reference, meaning changes to their contents will reflect outside the method.
