@@ -13,19 +13,12 @@
 # Implicit: The outputs seem to be floats, while inputs can be integers
 # D: Floats
 
-loop do
-loop do
-  puts "Enter the length of the room in meters:"
-  length = gets.chomp
-  length.to_f > 0 ? break : puts "Error: Please enter a number"
-end
-loop do
-  puts "Enter the width of the room in meters:"
-  width = gets.chomp
-  width.to_f > 0 ? break : puts "Error: Please enter a number"
-end
-square_meters = length * width
-square_feet = square_meters * 10.7639
-puts "The area of the room is #{square_meters} square meters (#{square_feet} square feet)."
+puts 'Enter the length of the room in meters:'
+length = gets.chomp.to_f
 
-end
+puts 'Enter the width of the room in meters:'
+width = gets.chomp.to_f
+
+area = (length * width).round(1)
+feet_area = (area * 10.7639).round(2)
+puts "The area of the room is #{area} square meters (#{feet_area} square feet)"
